@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glimmary - The ROI of Physical AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+brand: {
+dark: '#0A2540',
+primary: '#00E5FF',
+primaryDark: '#00B3CC',
+accent: '#bfe39e',
+light: '#F8FAFC',
+card: '#FFFFFF'
+}
+},
+fontFamily: {
+sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+}
+}
+}
+}
+</script>
+<style>
+body {
+background-color: #F8FAFC;
+color: #0A2540;
+-webkit-font-smoothing: antialiased;
+}
+.chart-container {
+position: relative;
+width: 100%;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+height: 300px;
+max-height: 350px;
+}
+.kpi-card {
+border-left: 4px solid #00E5FF;
+transition: all 0.3s ease;
+}
+.kpi-card:hover {
+background-color: #F1F5F9;
+transform: translateX(5px);
+}
+.gradient-bg {
+background: linear-gradient(135deg, #0A2540 0%, #1e293b 100%);
+}
+.pricing-token {
+background: rgba(0, 229, 255, 0.1);
+border: 1px solid rgba(0, 229, 255, 0.3);
+}
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<nav class="bg-brand-dark text-white sticky top-0 z-50 shadow-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black tracking-wider text-brand-primary">GLIMMARY</span>
+</div>
+<div class="hidden md:flex space-x-8 text-sm font-medium">
+<a href="#economics" class="hover:text-brand-primary transition-colors">Economic Impact</a>
+<a href="#comparison" class="hover:text-brand-primary transition-colors">Market Position</a>
+<a href="#tiers" class="hover:text-brand-primary transition-colors">Service Tiers</a>
+<a href="#pricing" class="hover:text-brand-primary transition-colors">Pricing</a>
+</div>
+</div>
+</div>
+</nav>
+
+<header class="gradient-bg text-white py-20 px-4">
+<div class="max-w-5xl mx-auto text-center">
+<h1 class="text-4xl md:text-6xl font-extrabold mb-6">Bridging the Gap Between <span class="text-brand-primary">Design & Reality</span></h1>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+Physical AI isn't just technology—it's a financial imperative. We transform video into the permanent organizational knowledge of a veteran architect.
+</p>
+</div>
+</header>
+
+<section id="economics" class="py-20 px-4 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div>
+<h2 class="text-3xl font-bold mb-6">Economic Impact & ROI</h2>
+<p class="text-gray-600 mb-8">
+For architecture firms and contractors, adoption is a financial decision. Physical AI optimizes the Multiplier by reducing the burden on senior staff and empowering junior staff with a veteran knowledgebase.
+</p>
+
+<div class="space-y-4">
+<div class="kpi-card bg-white p-5 rounded-r-xl shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Utilization Rate (Billable Time)</span>
+<span class="text-brand-primaryDark font-black">61% → Increase</span>
+</div>
+<p class="text-xs text-gray-500 mt-1">Shortened estimation cycles through automated lesson extraction.</p>
+</div>
+<div class="kpi-card bg-white p-5 rounded-r-xl shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Overhead Rate</span>
+<span class="text-brand-primaryDark font-black">162% → Decrease</span>
+</div>
+<p class="text-xs text-gray-500 mt-1">Reduced knowledge loss density and minimized expensive rework.</p>
+</div>
+<div class="kpi-card bg-white p-5 rounded-r-xl shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-bold text-lg">Net Multiplier</span>
+<span class="text-brand-primaryDark font-black">3.0+ → Optimized</span>
+</div>
+<p class="text-xs text-gray-500 mt-1">Giving every staff member access to a veteran architect knowledgebase.</p>
+</div>
+</div>
+
+<div class="mt-8 p-6 bg-brand-dark text-white rounded-2xl border-b-4 border-brand-accent">
+<h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-2">Automation Performance</h4>
+<div class="text-3xl font-bold">200% – 400% ROI</div>
+<p class="text-sm text-gray-400 mt-1">Payback periods typically ranging from 6 to 18 months.</p>
+</div>
+</div>
+
+<div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+<h3 class="text-xl font-bold mb-6 text-center">Profit Margin Protection</h3>
+<div class="chart-container">
+<canvas id="roiChart"></canvas>
+</div>
+<p class="text-sm text-gray-500 mt-6 italic text-center">
+"Manual observation is a major source of risk. We move from visual evidence to physical proof."
+</p>
+</div>
+</div>
+</section>
+
+<section id="comparison" class="py-20 bg-white px-4">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold">Reality Capture vs. <span class="text-brand-accent">Physical Intelligence</span></h2>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Standard tools show you "what" is behind a wall. Glimmary shows you if it was installed correctly by applying physics-first analysis.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
+<div class="p-10 bg-gray-50 border-r border-gray-200">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="p-2 bg-gray-200 rounded-lg">📸</span> Standard 360 Cameras
+</h3>
+<ul class="space-y-4">
+<li class="flex gap-3 text-gray-600"><span class="text-red-500">✕</span> "See behind walls" only</li>
+<li class="flex gap-3 text-gray-600"><span class="text-red-500">✕</span> Flag missing materials manually</li>
+<li class="flex gap-3 text-gray-600"><span class="text-red-500">✕</span> Knowledge leaves with the staff</li>
+<li class="flex gap-3 text-gray-600"><span class="text-red-500">✕</span> Static visual record</li>
+</ul>
+</div>
+<div class="p-10 bg-brand-dark text-white">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="p-2 bg-brand-primary/20 rounded-lg">🧠</span> Glimmary Physical AI
+</h3>
+<ul class="space-y-4">
+<li class="flex gap-3 text-brand-primary"><span>✔</span> Physics-First/AI-First workflows</li>
+<li class="flex gap-3 text-brand-primary"><span>✔</span> Verify correctness of installation</li>
+<li class="flex gap-3 text-brand-primary"><span>✔</span> Retains veteran architect knowledge</li>
+<li class="flex gap-3 text-brand-primary"><span>✔</span> Definitive physical proof</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tiers" class="py-20 bg-brand-light px-4">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-300">
+<h3 class="text-2xl font-bold mb-2">Simple</h3>
+<p class="text-gray-500 text-sm mb-6">Efficiency Focus</p>
+<div class="bg-gray-100 p-4 rounded-lg mb-6 text-sm font-mono">
+> [Prompt Output]
+Physics Data Extracted...
+</div>
+<p class="text-gray-600 text-sm">A prompt-based solution providing raw text output for quick check-ins.</p>
+</div>
+
+<div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-brand-primary scale-105 shadow-xl z-10">
+<h3 class="text-2xl font-bold mb-2">Thoughtful</h3>
+<p class="text-brand-primaryDark text-sm mb-6">Root Cause Analysis</p>
+<div class="flex flex-col gap-1 mb-6">
+<div class="h-2 bg-brand-primary/20 rounded-full w-full"></div>
+<div class="h-2 bg-brand-primary/20 rounded-full w-5/6"></div>
+<div class="h-2 bg-brand-primary/20 rounded-full w-4/6"></div>
+</div>
+<p class="text-gray-600 text-sm">A complex technical whitepaper explaining root cause analysis and structural implications.</p>
+</div>
+
+<div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-brand-accent">
+<h3 class="text-2xl font-bold mb-2">Pro</h3>
+<p class="text-brand-accent text-sm mb-6">Organizational Knowledge</p>
+<div class="grid grid-cols-2 gap-2 mb-6">
+<div class="h-8 bg-brand-accent/10 rounded"></div>
+<div class="h-8 bg-brand-accent/10 rounded"></div>
+<div class="h-8 bg-brand-accent/10 rounded"></div>
+<div class="h-8 bg-brand-accent/10 rounded"></div>
+</div>
+<p class="text-gray-600 text-sm">Whitepaper + Infographics that transform project outcomes into permanent organizational assets.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing" class="py-20 px-4">
+<div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+<div class="bg-brand-dark p-8 text-white text-center">
+<h2 class="text-3xl font-bold">Simple Cost Model</h2>
+<p class="text-gray-400 mt-2">No surprises. Pay-as-you-go tokens + Low annual entry.</p>
+</div>
+<div class="p-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<div class="text-5xl font-black text-brand-dark">$5.99 <span class="text-lg font-normal text-gray-500">/ year</span></div>
+<p class="text-sm font-bold uppercase tracking-widest text-brand-accent mt-2">Subscription Fee Per User</p>
+<p class="mt-6 text-gray-600 text-sm leading-relaxed">
+All tiers come with an **API Key** for bulk uploads. Our web app includes a **Token Tabulator** to eliminate financial surprises.
+</p>
+</div>
+<div class="space-y-4">
+<div class="pricing-token p-4 rounded-xl flex justify-between items-center">
+<span class="font-bold">Simple Tier</span>
+<span class="text-brand-primaryDark font-mono">1x Multiplier</span>
+</div>
+<div class="pricing-token p-4 rounded-xl flex justify-between items-center">
+<span class="font-bold">Thoughtful Tier</span>
+<span class="text-brand-primaryDark font-mono">2x Multiplier</span>
+</div>
+<div class="pricing-token p-4 rounded-xl flex justify-between items-center border-brand-accent">
+<span class="font-bold">Pro Tier</span>
+<span class="text-brand-accent font-mono">3x Multiplier</span>
+</div>
+<div class="mt-4 p-4 bg-gray-50 rounded-xl text-center">
+<span class="text-xs text-gray-500 uppercase font-bold">Quick Reference</span>
+<div class="text-xl font-bold text-brand-dark">60s Video ≈ $0.60</div>
+<p class="text-[10px] text-gray-400">(Simple Tier Base Rate)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-brand-dark text-white py-16 px-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-left">
+<span class="text-3xl font-black text-brand-primary">GLIMMARY</span>
+<p class="text-gray-400 mt-2">Capturing physical truth at the source.</p>
+</div>
+<div class="text-center md:text-right">
+<p class="text-sm text-gray-500">Sincerely,</p>
+<p class="text-xl font-bold">Karl Roesch - AIA</p>
+<a href="https://github.com/GlimmaryKarlR/WallFrame" class="text-brand-primary text-sm hover:underline mt-2 inline-block">View Example Project: WallFrame</a>
+</div>
+</div>
+</footer>
+
+<script>
+const wrapText = (text, maxLength = 16) => {
+if (text.length <= maxLength) return text;
+const words = text.split(' ');
+const lines = [];
+let currentLine = '';
+for (const word of words) {
+if ((currentLine + word).length > maxLength && currentLine !== '') {
+lines.push(currentLine.trim());
+currentLine = word + ' ';
+} else {
+currentLine += word + ' ';
+}
+}
+if (currentLine.trim() !== '') {
+lines.push(currentLine.trim());
+}
+return lines;
+};
+
+const commonTooltip = {
+callbacks: {
+title: function(tooltipItems) {
+const item = tooltipItems[0];
+let label = item.chart.data.labels[item.dataIndex];
+return Array.isArray(label) ? label.join(' ') : label;
+}
+}
+};
+
+const ctxRoi = document.getElementById('roiChart').getContext('2d');
+new Chart(ctxRoi, {
+type: 'bar',
+data: {
+labels: ['Manual Risk Margin', 'Glimmary Protected Margin'].map(l => wrapText(l)),
+datasets: [{
+label: 'Profit Margin %',
+data: [12, 22],
+backgroundColor: ['#94A3B8', '#FF6B35'],
+borderRadius: 8,
+barThickness: 60
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+plugins: {
+legend: { display: false },
+tooltip: commonTooltip
+},
+scales: {
+y: {
+beginAtZero: true,
+max: 30,
+ticks: { callback: v => v + '%' },
+grid: { color: '#F1F5F9' }
+},
+x: { grid: { display: false } }
+}
+}
+});
+</script>
+</body>
+</html>
